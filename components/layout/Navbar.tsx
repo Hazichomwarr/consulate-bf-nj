@@ -1,45 +1,36 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { ChevronDown, Globe2, Mail, Menu, Phone, X } from "lucide-react";
-
-type NavLink = {
-  label: string;
-  href: string;
-  children?: Array<{ label: string; href: string }>;
-};
-
-const navLinks: NavLink[] = [
-  { label: "Home", href: "/" },
-  {
-    label: "Consular Services",
-    href: "/services",
-    children: [
-      { label: "Passport Services", href: "/services/passports" },
-      { label: "Consular Card", href: "/services/consular-card" },
-      { label: "Civil Status", href: "/services/civil-status" },
-      { label: "Emergency Assistance", href: "/services/emergency-assistance" },
-    ],
-  },
-  {
-    label: "Documents",
-    href: "/documents",
-    children: [
-      { label: "Forms", href: "/documents/forms" },
-      { label: "Requirements", href: "/documents/requirements" },
-      { label: "Fees", href: "/documents/fees" },
-    ],
-  },
-  { label: "News & Announcements", href: "/news" },
-  { label: "Events", href: "/events" },
-  { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
-];
+import {
+  consulateInfo,
+  emailHref,
+  phoneHref,
+} from "@/lib/constants/consulate";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
+import type { Locale } from "@/i18n/routing";
+import { mainNavigation } from "@/lib/constants/navigation";
 
 export function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
+  const locale = useLocale() as Locale;
+  const pathname = usePathname();
+  const router = useRouter();
+  const nav = useTranslations("Navigation");
+  const navbar = useTranslations("Navbar");
+  const accessibility = useTranslations("Accessibility");
+  const alternateLocale: Locale = locale === "fr" ? "en" : "fr";
+  const alternateLocaleName = navbar(`language.${alternateLocale}`);
+
+  function switchLocale() {
+    const search = window.location.search;
+    router.replace(search ? `${pathname}${search}` : pathname, {
+      locale: alternateLocale,
+    });
+    setIsOpen(false);
+  }
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-200 bg-white/95 shadow-sm backdrop-blur">
@@ -47,7 +38,7 @@ export function NavBar() {
         <Link href="/" className="flex min-w-0 items-center gap-3">
           <Image
             src="/images/consul-logo.png"
-            alt="Consulate of Burkina Faso seal"
+            alt={accessibility("logoAlt")}
             width={64}
             height={64}
             priority
@@ -55,51 +46,50 @@ export function NavBar() {
           />
           <div className="leading-tight">
             <p className="text-sm font-semibold uppercase tracking-wide text-emerald-950">
-              Consulate of
+              {navbar("brandPrefix")}
             </p>
             <p className="font-serif text-2xl font-bold uppercase text-emerald-800 sm:text-3xl">
-              Burkina Faso
+              {navbar("brandName")}
             </p>
             <p className="text-sm font-bold uppercase tracking-wide text-red-600">
-              in New Jersey
+              {navbar("brandLocation")}
             </p>
           </div>
         </Link>
 
         <div className="hidden flex-col items-end gap-5 lg:flex">
           <div className="flex items-center gap-6 text-sm font-semibold text-slate-900">
-            <Link
-              href="/fr"
-              className="flex items-center gap-2 hover:text-emerald-700"
+            <button
+              type="button"
+              onClick={switchLocale}
+              aria-label={accessibility("switchToLocale", {
+                locale: alternateLocaleName,
+              })}
+              className="flex items-center gap-2 hover:text-emerald-700 cursor-pointer"
             >
-              Français
-              <span aria-hidden="true">🇫🇷</span>
-            </Link>
-            <Link
-              href="/en"
-              className="flex items-center gap-2 hover:text-emerald-700"
-            >
-              English
-              <span aria-hidden="true">🇺🇸</span>
-            </Link>
+              {alternateLocaleName}
+              <span aria-hidden="true">
+                {alternateLocale === "fr" ? "🇫🇷" : "🇺🇸"}
+              </span>
+            </button>
             <a
-              href="tel:+19735222250"
+              href={phoneHref(consulateInfo.phone)}
               className="flex items-center gap-2 hover:text-emerald-700"
             >
               <Phone className="h-4 w-4 text-emerald-700" aria-hidden="true" />
-              (973) 522-2250
+              {consulateInfo.phone}
             </a>
           </div>
 
-          <nav aria-label="Main navigation">
+          <nav aria-label={accessibility("mainNavigation")}>
             <ul className="flex items-center gap-7 text-sm font-semibold text-slate-950">
-              {navLinks.map((link) => (
+              {mainNavigation.map((link) => (
                 <li key={link.href} className="group relative">
                   <Link
                     href={link.href}
                     className="flex items-center gap-1 py-2 transition hover:text-emerald-700"
                   >
-                    {link.label}
+                    {nav(link.key)}
                     {link.children ? (
                       <ChevronDown
                         className="h-3.5 w-3.5 transition group-hover:rotate-180"
@@ -116,7 +106,7 @@ export function NavBar() {
                           href={child.href}
                           className="block rounded px-3 py-2 text-sm text-slate-800 hover:bg-emerald-50 hover:text-emerald-800"
                         >
-                          {child.label}
+                          {nav(child.key)}
                         </Link>
                       ))}
                     </div>
@@ -131,7 +121,9 @@ export function NavBar() {
           type="button"
           onClick={() => setIsOpen((value) => !value)}
           className="inline-flex h-11 w-11 items-center justify-center rounded-md border border-slate-200 text-emerald-950 lg:hidden"
-          aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-label={
+            isOpen ? accessibility("closeMenu") : accessibility("openMenu")
+          }
           aria-expanded={isOpen}
         >
           {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -141,49 +133,52 @@ export function NavBar() {
       {isOpen ? (
         <div className="border-t border-slate-200 bg-white lg:hidden">
           <nav
-            aria-label="Mobile navigation"
+            aria-label={accessibility("mobileNavigation")}
             className="mx-auto max-w-7xl px-4 py-4"
           >
             <div className="mb-4 grid gap-2 text-sm font-semibold text-slate-900">
-              <Link href="/fr" className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={switchLocale}
+                aria-label={accessibility("switchToLocale", {
+                  locale: alternateLocaleName,
+                })}
+                className="flex items-center gap-2 cursor-pointer"
+              >
                 <Globe2
                   className="h-4 w-4 text-emerald-700"
                   aria-hidden="true"
                 />
-                Français 🇫🇷
-              </Link>
-              <Link href="/en" className="flex items-center gap-2">
-                <Globe2
-                  className="h-4 w-4 text-emerald-700"
-                  aria-hidden="true"
-                />
-                English 🇺🇸
-              </Link>
-              <a href="tel:+19735222250" className="flex items-center gap-2">
+                {alternateLocaleName} {alternateLocale === "fr" ? "🇫🇷" : "🇺🇸"}
+              </button>
+              <a
+                href={phoneHref(consulateInfo.phone)}
+                className="flex items-center gap-2"
+              >
                 <Phone
                   className="h-4 w-4 text-emerald-700"
                   aria-hidden="true"
                 />
-                (973) 522-2250
+                {consulateInfo.phone}
               </a>
               <a
-                href="mailto:info@consulatebf-nj.org"
+                href={emailHref(consulateInfo.email)}
                 className="flex items-center gap-2"
               >
                 <Mail className="h-4 w-4 text-emerald-700" aria-hidden="true" />
-                info@consulatebf-nj.org
+                {consulateInfo.email}
               </a>
             </div>
 
             <ul className="grid gap-1 text-base font-semibold text-slate-950">
-              {navLinks.map((link) => (
+              {mainNavigation.map((link) => (
                 <li key={link.href} className="border-t border-slate-100 py-2">
                   <Link
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className="block py-1"
                   >
-                    {link.label}
+                    {nav(link.key)}
                   </Link>
                   {link.children ? (
                     <div className="mt-1 grid gap-1 pl-4 text-sm font-medium text-slate-600">
@@ -194,7 +189,7 @@ export function NavBar() {
                           onClick={() => setIsOpen(false)}
                           className="py-1 hover:text-emerald-800"
                         >
-                          {child.label}
+                          {nav(child.key)}
                         </Link>
                       ))}
                     </div>

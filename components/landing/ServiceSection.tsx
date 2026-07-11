@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import {
   ArrowRight,
   FileText,
@@ -7,55 +7,50 @@ import {
   Shield,
   UsersRound,
 } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
 const services = [
   {
-    title: "Passport Services",
-    description: "Apply for a new passport or renew your existing passport.",
-    href: "/services/passport",
+    key: "passport",
+    href: "/services-consulaires/passeport",
     icon: FileText,
   },
   {
-    title: "Consular Card",
-    description: "Registration and renewal of the Burkinabè Consular Card.",
-    href: "/services/consular-card",
+    key: "consularCard",
+    href: "/services-consulaires/carte-consulaire",
     icon: IdCard,
   },
   {
-    title: "Civil Status",
-    description: "Birth, marriage, death certificates and other civil records.",
-    href: "/services/civil-status",
+    key: "civilStatus",
+    href: "/services-consulaires/etat-civil",
     icon: FileText,
   },
   {
-    title: "Travel & Visa",
-    description:
-      "Information about visas, travel requirements and invitations.",
-    href: "/services/travel-visa",
+    key: "travelVisa",
+    href: "/services-consulaires/voyage-visa",
     icon: Plane,
   },
   {
-    title: "Community Services",
-    description: "Support and resources for the Burkinabè community.",
-    href: "/services/community",
+    key: "community",
+    href: "/services-consulaires/communaute",
     icon: UsersRound,
   },
   {
-    title: "Emergency Assistance",
-    description:
-      "Assistance and guidance for Burkinabè citizens in urgent situations.",
-    href: "/services/emergency",
+    key: "emergency",
+    href: "/services-consulaires/assistance-urgence",
     icon: Shield,
   },
 ];
 
-export default function ServicesSection() {
+export default async function ServicesSection() {
+  const t = await getTranslations("Home.Services");
+
   return (
     <section className="bg-white px-5 py-12 text-slate-950 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div className="text-center">
           <h2 className="font-serif text-3xl font-black tracking-tight text-slate-950 md:text-4xl">
-            How Can We Help You?
+            {t("heading")}
           </h2>
           <div className="mx-auto mt-3 flex w-16 items-center justify-center gap-2">
             <span className="h-0.5 w-5 rounded-full bg-amber-400" />
@@ -70,7 +65,7 @@ export default function ServicesSection() {
 
             return (
               <Link
-                key={service.title}
+                key={service.key}
                 href={service.href}
                 className="group flex min-h-65 flex-col rounded-lg border border-slate-200 bg-white p-7 shadow-sm transition hover:-translate-y-1 hover:border-emerald-700/30 hover:shadow-xl hover:shadow-slate-950/10 focus:outline-none focus:ring-4 focus:ring-emerald-800/20"
               >
@@ -79,15 +74,15 @@ export default function ServicesSection() {
                 </div>
 
                 <h3 className="mt-5 min-h-12 text-center text-lg font-extrabold leading-6 text-slate-950">
-                  {service.title}
+                  {t(`items.${service.key}.title`)}
                 </h3>
 
                 <p className="mt-4 flex-1 text-sm leading-6 text-slate-700">
-                  {service.description}
+                  {t(`items.${service.key}.description`)}
                 </p>
 
                 <span className="mt-7 inline-flex items-center gap-2 text-sm font-extrabold text-emerald-800">
-                  Start Request
+                  {t("startRequest")}
                   <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
                 </span>
               </Link>

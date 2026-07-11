@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import {
   ArrowRight,
   Clock,
@@ -8,27 +8,34 @@ import {
   Phone,
   Target,
 } from "lucide-react";
+import {
+  consulateInfo,
+  emailHref,
+  formatAddress,
+  phoneHref,
+} from "@/lib/constants/consulate";
+import { Link } from "@/i18n/navigation";
 
-export default function AboutContactSection() {
+export default async function AboutContactSection() {
+  const t = await getTranslations("Home.AboutContact");
+  const addressLines = formatAddress(consulateInfo.address);
+
   return (
     <section className="bg-white px-5 pb-14 pt-2 text-slate-950 lg:px-8">
       <div className="mx-auto grid max-w-7xl gap-4 lg:grid-cols-[1.05fr_0.82fr_1fr]">
         <article className="relative overflow-hidden rounded-lg border border-slate-200 bg-slate-50 p-8 shadow-sm">
           <div className="relative z-10 max-w-sm">
             <h2 className="font-serif text-2xl font-black text-slate-950">
-              About the Consulate
+              {t("aboutHeading")}
             </h2>
             <p className="mt-5 text-sm leading-7 text-slate-800">
-              The Consulate of Burkina Faso in New Jersey is committed to
-              providing quality consular services to Burkinabè citizens and
-              strengthening the bonds between Burkina Faso and the United
-              States.
+              {t("aboutDescription")}
             </p>
             <Link
-              href="/about"
+              href="/a-propos"
               className="mt-7 inline-flex h-11 items-center gap-2 rounded-md bg-emerald-800 px-6 text-sm font-extrabold text-white transition hover:bg-emerald-900 focus:outline-none focus:ring-4 focus:ring-emerald-800/25"
             >
-              Learn More About Us
+              {t("aboutCta")}
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
@@ -62,11 +69,10 @@ export default function AboutContactSection() {
             <Target className="mt-1 h-10 w-10 shrink-0 text-emerald-800" />
             <div>
               <h3 className="text-lg font-extrabold text-emerald-800">
-                Our Mission
+                {t("missionHeading")}
               </h3>
               <p className="mt-3 text-sm leading-7 text-slate-800">
-                To protect and assist Burkinabè citizens, promote Burkina Faso
-                {"'"}s interests, and strengthen ties with the diaspora.
+                {t("missionDescription")}
               </p>
             </div>
           </div>
@@ -75,11 +81,10 @@ export default function AboutContactSection() {
             <Eye className="mt-1 h-10 w-10 shrink-0 text-emerald-800" />
             <div>
               <h3 className="text-lg font-extrabold text-emerald-800">
-                Our Vision
+                {t("visionHeading")}
               </h3>
               <p className="mt-3 text-sm leading-7 text-slate-800">
-                A strong and united Burkinabè community, contributing to the
-                development of Burkina Faso.
+                {t("visionDescription")}
               </p>
             </div>
           </div>
@@ -107,37 +112,45 @@ export default function AboutContactSection() {
           </div>
 
           <div className="relative z-10">
-            <h2 className="font-serif text-2xl font-black">Consular Office</h2>
+            <h2 className="font-serif text-2xl font-black">
+              {t("officeHeading")}
+            </h2>
 
             <div className="mt-8 space-y-5 text-sm leading-6">
               <p className="flex items-start gap-4">
                 <MapPin className="mt-1 h-5 w-5 shrink-0 text-amber-300" />
                 <span>
-                  123 Market Street, Suite 200
-                  <br />
-                  Newark, NJ 07102, USA
+                  {addressLines.map((line, index) => (
+                    <span key={line}>
+                      {line}
+                      {index < addressLines.length - 1 ? <br /> : null}
+                    </span>
+                  ))}
                 </span>
               </p>
 
-              <Link href="tel:+19735222250" className="flex items-center gap-4">
+              <a
+                href={phoneHref(consulateInfo.phone)}
+                className="flex items-center gap-4"
+              >
                 <Phone className="h-5 w-5 shrink-0 text-amber-300" />
-                <span>(973) 522-2250</span>
-              </Link>
+                <span>{consulateInfo.phone}</span>
+              </a>
 
-              <Link
-                href="mailto:info@consulatebf-nj.org"
+              <a
+                href={emailHref(consulateInfo.email)}
                 className="flex items-center gap-4"
               >
                 <Mail className="h-5 w-5 shrink-0 text-amber-300" />
-                <span>info@consulatebf-nj.org</span>
-              </Link>
+                <span>{consulateInfo.email}</span>
+              </a>
 
               <p className="flex items-start gap-4">
                 <Clock className="mt-1 h-5 w-5 shrink-0 text-amber-300" />
                 <span>
-                  Mon - Fri: 9:00 AM - 5:00 PM
+                  {t("officeHoursLabel")}
                   <br />
-                  (Closed on US & BF Holidays)
+                  ({t("officeHoursNote")})
                 </span>
               </p>
             </div>

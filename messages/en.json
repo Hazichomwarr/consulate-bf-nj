@@ -1,0 +1,233 @@
+{
+  "Metadata": {
+    "title": "Consulate of Burkina Faso in Newark, New Jersey",
+    "description": "Consular services, administrative assistance, and public information for Burkinabè citizens in New Jersey.",
+    "ogLocale": "en_US"
+  },
+  "Accessibility": {
+    "openMenu": "Open navigation menu",
+    "closeMenu": "Close navigation menu",
+    "mainNavigation": "Main navigation",
+    "mobileNavigation": "Mobile navigation",
+    "footerQuickLinks": "Footer quick links",
+    "usefulLinks": "Useful links",
+    "switchToLocale": "Switch site to {locale}",
+    "logoAlt": "Consulate of Burkina Faso seal",
+    "heroImageAlt": "National monument and flag of Burkina Faso"
+  },
+  "Common": {
+    "viewAll": "View all",
+    "emailAddress": "Email address",
+    "governmentOfBurkinaFaso": "Government of Burkina Faso"
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "mission": "Mission",
+    "consulMessage": "Message from the Consul",
+    "services": "Consular Services",
+    "passport": "Passport",
+    "consularCard": "Consular Card",
+    "civilStatus": "Civil Status",
+    "emergencyAssistance": "Emergency Assistance",
+    "documents": "Documents",
+    "news": "News",
+    "events": "Events",
+    "contact": "Contact"
+  },
+  "Navbar": {
+    "brandPrefix": "Consulate of",
+    "brandName": "Burkina Faso",
+    "brandLocation": "in New Jersey",
+    "language": {
+      "fr": "Français",
+      "en": "English"
+    }
+  },
+  "Footer": {
+    "brandPrefix": "Consulate of",
+    "brandName": "Burkina Faso",
+    "brandLocation": "In New Jersey",
+    "motto": "Unity - Progress - Justice",
+    "quickLinks": "Quick Links",
+    "usefulLinks": "Useful Links",
+    "followUs": "Follow Us",
+    "stayInformed": "Stay Informed",
+    "newsletterDescription": "Receive important public updates and announcements.",
+    "emailPlaceholder": "Your email address",
+    "subscribe": "Subscribe",
+    "copyright": "© 2024 Consulate of Burkina Faso in New Jersey. All rights reserved."
+  },
+  "Home": {
+    "Hero": {
+      "trustLabel": "Official Consulate of Burkina Faso",
+      "titlePrefix": "Consulate of",
+      "titleName": "Burkina Faso",
+      "titleLocation": "in New Jersey",
+      "description": "The Consulate of Burkina Faso in New Jersey provides passport services, consular assistance, travel documentation, and administrative support for Burkinabè citizens.",
+      "servicesCta": "Our Services",
+      "contactCta": "Contact Us"
+    },
+    "Services": {
+      "heading": "How Can We Help You?",
+      "startRequest": "Start Request",
+      "items": {
+        "passport": {
+          "title": "Passport Services",
+          "description": "Apply for a new passport or renew your existing passport."
+        },
+        "consularCard": {
+          "title": "Consular Card",
+          "description": "Registration and renewal of the Burkinabè Consular Card."
+        },
+        "civilStatus": {
+          "title": "Civil Status",
+          "description": "Birth, marriage, death certificates, and other civil records."
+        },
+        "travelVisa": {
+          "title": "Travel & Visa",
+          "description": "Information about visas, travel requirements, and invitations."
+        },
+        "community": {
+          "title": "Community Services",
+          "description": "Support and resources for the Burkinabè community."
+        },
+        "emergency": {
+          "title": "Emergency Assistance",
+          "description": "Assistance and guidance for Burkinabè citizens in urgent situations."
+        }
+      }
+    },
+    "NewsEvents": {
+      "newsHeading": "News & Announcements",
+      "eventsHeading": "Upcoming Events",
+      "viewAllEvents": "View All Events",
+      "categories": {
+        "announcement": "Announcement",
+        "news": "News"
+      },
+      "newsItems": {
+        "outreach": {
+          "title": "Consular Outreach in New Jersey",
+          "date": "May 10, 2024",
+          "description": "The Consulate will conduct an outreach mission to serve the community. More details will be shared soon."
+        },
+        "passport": {
+          "title": "Passport Renewal Campaign",
+          "date": "May 3, 2024",
+          "description": "Take advantage of our special passport renewal campaign this summer."
+        },
+        "nationalDay": {
+          "title": "Burkina Faso National Day Celebration",
+          "date": "April 25, 2024",
+          "description": "Join us as we celebrate the 64th anniversary of Burkina Faso's independence."
+        }
+      },
+      "events": {
+        "nationalDay": {
+          "title": "National Day Celebration",
+          "month": "Jun",
+          "day": "05",
+          "time": "Saturday, June 5, 2024 - 12:00 PM",
+          "location": "Newark Symphony Hall, Newark, NJ"
+        },
+        "outreach": {
+          "title": "Consular Outreach",
+          "month": "Jun",
+          "day": "15",
+          "time": "Saturday, June 15, 2024 - 9:00 AM",
+          "location": "Paterson Community Center, Paterson, NJ"
+        },
+        "communityMeeting": {
+          "title": "Community Meeting",
+          "month": "Jun",
+          "day": "22",
+          "time": "Saturday, June 22, 2024 - 2:00 PM",
+          "location": "Consulate Office, Newark, NJ"
+        }
+      }
+    },
+    "AboutContact": {
+      "aboutHeading": "About the Consulate",
+      "aboutDescription": "The Consulate of Burkina Faso in New Jersey is committed to providing quality consular services to Burkinabè citizens and strengthening the bonds between Burkina Faso and the United States.",
+      "aboutCta": "Learn More About Us",
+      "missionHeading": "Our Mission",
+      "missionDescription": "To protect and assist Burkinabè citizens, promote Burkina Faso's interests, and strengthen ties with the diaspora.",
+      "visionHeading": "Our Vision",
+      "visionDescription": "A strong and united Burkinabè community, contributing to the development of Burkina Faso.",
+      "officeHeading": "Consular Office",
+      "officeHoursLabel": "Mon - Fri: 9:00 AM - 5:00 PM",
+      "officeHoursNote": "Closed on US & BF Holidays"
+    }
+  },
+  "ConsularServicesPage": {
+    "Metadata": {
+      "title": "Consular Services | Consulate of Burkina Faso",
+      "description": "Review available information to prepare a request with the Consulate of Burkina Faso."
+    },
+    "hero": {
+      "eyebrow": "Consular procedures",
+      "title": "Consular Services",
+      "description": "Find information and guidance for the main services offered by the consulate."
+    },
+    "intro": {
+      "eyebrow": "Prepare your request",
+      "title": "Review available services",
+      "description": "Review the available information to prepare your request. Official requirements, fees, and processing times must be confirmed with the consulate.",
+      "confirmationNote": "This page helps prepare a future information or guidance request. It does not replace an official procedure and does not confirm final administrative requirements."
+    },
+    "cards": {
+      "learnMore": "Learn more"
+    },
+    "status": {
+      "active": "Available",
+      "coming-soon": "Coming soon",
+      "unavailable": "Unavailable"
+    },
+    "empty": {
+      "title": "No consular services are available at this time.",
+      "description": "Please check back later for published services."
+    },
+    "notice": {
+      "title": "Important Information",
+      "requirements": "Official requirements, supporting documents, fees, and processing times are still being confirmed.",
+      "updates": "Published information may be updated when the consulate confirms new details.",
+      "emergencies": "For immediate police, fire, or medical emergencies, contact local emergency services."
+    },
+    "cta": {
+      "eyebrow": "Need guidance?",
+      "title": "Prepare a request online",
+      "description": "You can start a request to organize your information before contacting the consulate.",
+      "primary": "Start a Request"
+    }
+  },
+  "ConsularServiceDetailPage": {
+    "metadata": {
+      "title": "{service} | Consular Services",
+      "notFoundTitle": "Service Not Found | Consular Services",
+      "notFoundDescription": "The requested service is not available."
+    },
+    "breadcrumbs": {
+      "ariaLabel": "Breadcrumb"
+    },
+    "sections": {
+      "overview": "Overview",
+      "whoThisIsFor": "Who This Is For",
+      "includedSupport": "Included Support",
+      "requiredDocuments": "Required Documents",
+      "process": "Process",
+      "importantNotes": "Important Notes",
+      "faq": "Frequently Asked Questions"
+    },
+    "requirementsDisclaimer": "Official document requirements must be confirmed with the consulate.",
+    "cta": {
+      "title": "Prepare your request",
+      "description": "This step helps organize your information before contacting the consulate. It does not replace an official procedure.",
+      "backToServices": "Back to services"
+    },
+    "statusNotice": {
+      "coming-soon": "This service will be available soon. Online requests are not open yet.",
+      "unavailable": "This service is currently unavailable. Online requests are not offered at this time."
+    }
+  }
+}

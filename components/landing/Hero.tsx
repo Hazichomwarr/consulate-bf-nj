@@ -1,16 +1,18 @@
-"use client";
-
 import Image from "next/image";
-import Link from "next/link";
+import { getTranslations } from "next-intl/server";
 import { Mail, FileText } from "lucide-react";
+import { Link } from "@/i18n/navigation";
 
-export default function Hero() {
+export default async function Hero() {
+  const hero = await getTranslations("Home.Hero");
+  const accessibility = await getTranslations("Accessibility");
+
   return (
     <section className="relative overflow-hidden bg-white text-slate-950">
       <div className="relative min-h-[80vh]">
         <Image
           src="/images/consul-hero.png"
-          alt="National monument and flag of Burkina Faso"
+          alt={accessibility("heroImageAlt")}
           fill
           sizes="100vw"
           className="object-cover object-center"
@@ -23,36 +25,36 @@ export default function Hero() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/90 px-4 py-2 text-sm font-semibold text-emerald-900 shadow-sm backdrop-blur">
               <span>🇧🇫</span>
-              <span>Official Consulate of Burkina Faso</span>
+              <span>{hero("trustLabel")}</span>
             </div>
             <h1 className="font-serif text-[clamp(3rem,6vw,5.9rem)] font-black leading-[0.96] text-emerald-950">
-              Consulate of
-              <span className="block text-emerald-900">Burkina Faso</span>
+              {hero("titlePrefix")}
+              <span className="block text-emerald-900">
+                {hero("titleName")}
+              </span>
               <span className="block text-[0.52em] leading-tight text-red-800">
-                in New Jersey
+                {hero("titleLocation")}
               </span>
             </h1>
 
             <p className="mt-7 max-w-xl text-xl leading-8 text-slate-800">
-              The official Consulate of Burkina Faso in New Jersey providing
-              passport services, consular assistance, travel documentation, and
-              support for Burkinabè citizens.
+              {hero("description")}
             </p>
 
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
-                href="/services"
+                href="/services-consulaires"
                 className="inline-flex h-14 items-center gap-3 rounded-md bg-emerald-800 px-8 text-base font-extrabold text-white shadow-lg shadow-emerald-950/15 transition hover:bg-emerald-900 focus:outline-none focus:ring-4 focus:ring-emerald-800/25"
               >
                 <FileText className="h-5 w-5" />
-                Our Services
+                {hero("servicesCta")}
               </Link>
               <Link
                 href="/contact"
                 className="inline-flex h-14 items-center gap-3 rounded-md border border-emerald-900 bg-white px-8 text-base font-extrabold text-emerald-950 shadow-sm transition hover:bg-emerald-50 focus:outline-none focus:ring-4 focus:ring-emerald-800/20"
               >
                 <Mail className="h-5 w-5 text-emerald-800" />
-                Contact Us
+                {hero("contactCta")}
               </Link>
             </div>
           </div>
