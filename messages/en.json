@@ -347,5 +347,56 @@
       "register": "Register",
       "backToEvents": "Back to events"
     }
+  },
+  "AboutPages": {
+    "cta": {
+      "eyebrow": "Explore the consulate"
+    },
+    "About": {
+      "Metadata": {
+        "title": "About | Consulate of Burkina Faso",
+        "description": "Learn about the institutional role, priorities, and communities supported by the Consulate of Burkina Faso."
+      },
+      "heroEyebrow": "Institution",
+      "overviewBadge": "Overview",
+      "whoItServes": "Who it serves",
+      "prioritiesEyebrow": "Priorities",
+      "prioritiesTitle": "Public service principles",
+      "prioritiesDescription": "These priorities shape how public information is presented on the platform.",
+      "ctaTitle": "Continue exploring",
+      "ctaDescription": "Review the consulate's general mission or go directly to information about consular services.",
+      "missionCta": "Read the mission",
+      "servicesCta": "View services"
+    },
+    "Mission": {
+      "Metadata": {
+        "title": "Mission | Consulate of Burkina Faso",
+        "description": "Review a general presentation of the mission and service principles of the consular platform."
+      },
+      "heroEyebrow": "Institutional mission",
+      "statementBadge": "Mission statement",
+      "principlesEyebrow": "Principles",
+      "principlesTitle": "Service principles",
+      "principlesDescription": "The platform emphasizes clear, accessible, and careful information.",
+      "commitmentsEyebrow": "Commitments",
+      "commitmentsTitle": "Public commitments",
+      "commitmentsDescription": "These commitments will guide future institutional updates.",
+      "ctaTitle": "Review consular services",
+      "ctaDescription": "Access available information to prepare a request with the consulate.",
+      "servicesCta": "View services"
+    },
+    "ConsulMessage": {
+      "Metadata": {
+        "title": "Message from the Consul | Consulate of Burkina Faso",
+        "description": "Page prepared to host the official message from the Consul when provided by the consulate."
+      },
+      "heroEyebrow": "Institutional message",
+      "portraitPlaceholder": "Consul portrait to be confirmed",
+      "placeholderBadge": "To be completed",
+      "messageBadge": "Message",
+      "ctaTitle": "Learn more about the consulate",
+      "ctaDescription": "Return to the general presentation of the consulate and its institutional role.",
+      "aboutCta": "Back to About"
+    }
   }
 }

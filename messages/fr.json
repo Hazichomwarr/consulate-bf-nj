@@ -347,5 +347,56 @@
       "register": "S'inscrire",
       "backToEvents": "Retour aux événements"
     }
+  },
+  "AboutPages": {
+    "cta": {
+      "eyebrow": "Explorer le consulat"
+    },
+    "About": {
+      "Metadata": {
+        "title": "À propos | Consulat du Burkina Faso",
+        "description": "Découvrez le rôle institutionnel, les priorités et les publics accompagnés par le Consulat du Burkina Faso."
+      },
+      "heroEyebrow": "Institution",
+      "overviewBadge": "Présentation",
+      "whoItServes": "Publics accompagnés",
+      "prioritiesEyebrow": "Priorités",
+      "prioritiesTitle": "Principes de service public",
+      "prioritiesDescription": "Ces priorités structurent la manière dont les informations publiques sont présentées sur la plateforme.",
+      "ctaTitle": "Poursuivre votre découverte",
+      "ctaDescription": "Consultez la mission générale du consulat ou accédez directement aux informations sur les services consulaires.",
+      "missionCta": "Lire la mission",
+      "servicesCta": "Voir les services"
+    },
+    "Mission": {
+      "Metadata": {
+        "title": "Mission | Consulat du Burkina Faso",
+        "description": "Consultez une présentation générale de la mission et des principes de service de la plateforme consulaire."
+      },
+      "heroEyebrow": "Mission institutionnelle",
+      "statementBadge": "Énoncé de mission",
+      "principlesEyebrow": "Principes",
+      "principlesTitle": "Principes de service",
+      "principlesDescription": "La plateforme privilégie une information claire, accessible et prudente.",
+      "commitmentsEyebrow": "Engagements",
+      "commitmentsTitle": "Engagements publics",
+      "commitmentsDescription": "Ces engagements guideront les futures mises à jour institutionnelles.",
+      "ctaTitle": "Consulter les services consulaires",
+      "ctaDescription": "Accédez aux informations disponibles pour préparer une démarche auprès du consulat.",
+      "servicesCta": "Voir les services"
+    },
+    "ConsulMessage": {
+      "Metadata": {
+        "title": "Mot du Consul | Consulat du Burkina Faso",
+        "description": "Page préparée pour accueillir le message officiel du Consul lorsqu'il sera fourni par le consulat."
+      },
+      "heroEyebrow": "Message institutionnel",
+      "portraitPlaceholder": "Portrait du Consul à confirmer",
+      "placeholderBadge": "À compléter",
+      "messageBadge": "Message",
+      "ctaTitle": "En savoir plus sur le consulat",
+      "ctaDescription": "Retournez à la présentation générale du consulat et de son rôle institutionnel.",
+      "aboutCta": "Retour à À propos"
+    }
   }
 }
