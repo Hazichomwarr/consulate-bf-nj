@@ -278,5 +278,74 @@
       "asideDescription": "Return to the announcements list to review other available communications.",
       "backToAnnouncements": "Back to news"
     }
+  },
+  "EventsPage": {
+    "Metadata": {
+      "title": "Events | Consulate of Burkina Faso",
+      "description": "Review events and gatherings published by the Consulate of Burkina Faso."
+    },
+    "DetailMetadata": {
+      "title": "{title} | Events",
+      "notFoundTitle": "Event Not Found | Events",
+      "notFoundDescription": "The requested event is not available."
+    },
+    "hero": {
+      "eyebrow": "Community life",
+      "title": "Events",
+      "description": "Find events, gatherings, and public initiatives published by the consulate."
+    },
+    "intro": {
+      "eyebrow": "Public calendar",
+      "title": "Events and gatherings",
+      "description": "This section presents events published on the platform. Demo content will be replaced by events validated by the consulate."
+    },
+    "featured": {
+      "title": "Featured event"
+    },
+    "upcoming": {
+      "eyebrow": "Upcoming",
+      "title": "Upcoming events",
+      "description": "Review scheduled events and available information to prepare your participation.",
+      "emptyTitle": "No upcoming events are available at this time.",
+      "emptyDescription": "Please check back later for published events."
+    },
+    "past": {
+      "eyebrow": "Archive",
+      "title": "Past events",
+      "description": "Review events previously published on the platform."
+    },
+    "cards": {
+      "readMore": "View event",
+      "featured": "Featured",
+      "eventDate": "Event date",
+      "location": "Location"
+    },
+    "categories": {
+      "community": "Community",
+      "consular-outreach": "Consular outreach",
+      "cultural": "Cultural",
+      "official": "Official"
+    },
+    "status": {
+      "scheduled": "Scheduled",
+      "cancelled": "Cancelled",
+      "completed": "Completed"
+    },
+    "empty": {
+      "title": "No events are available at this time.",
+      "description": "Please check back later for published events."
+    },
+    "breadcrumbs": {
+      "ariaLabel": "Breadcrumb"
+    },
+    "detail": {
+      "descriptionTitle": "About this event",
+      "eventDetails": "Event details",
+      "date": "Date",
+      "location": "Location",
+      "viewMap": "View map",
+      "register": "Register",
+      "backToEvents": "Back to events"
+    }
   }
 }

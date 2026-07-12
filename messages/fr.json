@@ -278,5 +278,74 @@
       "asideDescription": "Retournez à la liste des annonces pour consulter les autres communications disponibles.",
       "backToAnnouncements": "Retour aux actualités"
     }
+  },
+  "EventsPage": {
+    "Metadata": {
+      "title": "Événements | Consulat du Burkina Faso",
+      "description": "Consultez les événements et rencontres publiés par le Consulat du Burkina Faso."
+    },
+    "DetailMetadata": {
+      "title": "{title} | Événements",
+      "notFoundTitle": "Événement introuvable | Événements",
+      "notFoundDescription": "L'événement demandé n'est pas disponible."
+    },
+    "hero": {
+      "eyebrow": "Vie communautaire",
+      "title": "Événements",
+      "description": "Retrouvez les événements, rencontres et initiatives publiques publiés par le consulat."
+    },
+    "intro": {
+      "eyebrow": "Calendrier public",
+      "title": "Événements et rencontres",
+      "description": "Cette rubrique présente les événements publiés sur la plateforme. Les contenus de démonstration seront remplacés par des événements validés par le consulat."
+    },
+    "featured": {
+      "title": "Événement mis en avant"
+    },
+    "upcoming": {
+      "eyebrow": "À venir",
+      "title": "Événements à venir",
+      "description": "Consultez les événements programmés et les informations disponibles pour vous préparer.",
+      "emptyTitle": "Aucun événement à venir n’est disponible pour le moment.",
+      "emptyDescription": "Veuillez revenir ultérieurement pour consulter les événements publiés."
+    },
+    "past": {
+      "eyebrow": "Archives",
+      "title": "Événements passés",
+      "description": "Retrouvez les événements précédemment publiés sur la plateforme."
+    },
+    "cards": {
+      "readMore": "Voir l'événement",
+      "featured": "À la une",
+      "eventDate": "Date de l'événement",
+      "location": "Lieu"
+    },
+    "categories": {
+      "community": "Communauté",
+      "consular-outreach": "Mission consulaire",
+      "cultural": "Culturel",
+      "official": "Officiel"
+    },
+    "status": {
+      "scheduled": "Programmé",
+      "cancelled": "Annulé",
+      "completed": "Terminé"
+    },
+    "empty": {
+      "title": "Aucun événement n’est disponible pour le moment.",
+      "description": "Veuillez revenir ultérieurement pour consulter les événements publiés."
+    },
+    "breadcrumbs": {
+      "ariaLabel": "Fil d'Ariane"
+    },
+    "detail": {
+      "descriptionTitle": "À propos de l'événement",
+      "eventDetails": "Détails de l'événement",
+      "date": "Date",
+      "location": "Lieu",
+      "viewMap": "Voir la carte",
+      "register": "S'inscrire",
+      "backToEvents": "Retour aux événements"
+    }
   }
 }
