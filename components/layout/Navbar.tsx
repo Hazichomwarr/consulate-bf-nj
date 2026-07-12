@@ -23,6 +23,7 @@ export function NavBar() {
   const accessibility = useTranslations("Accessibility");
   const alternateLocale: Locale = locale === "fr" ? "en" : "fr";
   const alternateLocaleName = navbar(`language.${alternateLocale}`);
+  const localeOptions: Locale[] = ["fr", "en"];
 
   function switchLocale() {
     const search = window.location.search;
@@ -65,11 +66,23 @@ export function NavBar() {
               aria-label={accessibility("switchToLocale", {
                 locale: alternateLocaleName,
               })}
-              className="flex items-center gap-2 hover:text-emerald-700 cursor-pointer"
+              className="flex cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-white px-2 py-1 text-xs font-extrabold uppercase tracking-wide text-slate-700 shadow-sm transition hover:border-emerald-700/40 hover:text-emerald-800 focus:outline-none focus:ring-4 focus:ring-emerald-800/20"
             >
-              {alternateLocaleName}
-              <span aria-hidden="true">
-                {alternateLocale === "fr" ? "🇫🇷" : "🇺🇸"}
+              <Globe2 className="h-4 w-4 text-emerald-700" aria-hidden="true" />
+              <span className="sr-only">{alternateLocaleName}</span>
+              <span className="flex items-center gap-1" aria-hidden="true">
+                {localeOptions.map((option) => (
+                  <span
+                    key={option}
+                    className={
+                      option === locale
+                        ? "rounded-full bg-emerald-900 px-2 py-1 text-white"
+                        : "px-2 py-1"
+                    }
+                  >
+                    {option.toUpperCase()}
+                  </span>
+                ))}
               </span>
             </button>
             <a
@@ -143,13 +156,27 @@ export function NavBar() {
                 aria-label={accessibility("switchToLocale", {
                   locale: alternateLocaleName,
                 })}
-                className="flex items-center gap-2 cursor-pointer"
+                className="flex w-fit cursor-pointer items-center gap-2 rounded-full border border-slate-200 bg-white px-2 py-1 text-xs font-extrabold uppercase tracking-wide text-slate-700 shadow-sm"
               >
                 <Globe2
                   className="h-4 w-4 text-emerald-700"
                   aria-hidden="true"
                 />
-                {alternateLocaleName} {alternateLocale === "fr" ? "🇫🇷" : "🇺🇸"}
+                <span className="sr-only">{alternateLocaleName}</span>
+                <span className="flex items-center gap-1" aria-hidden="true">
+                  {localeOptions.map((option) => (
+                    <span
+                      key={option}
+                      className={
+                        option === locale
+                          ? "rounded-full bg-emerald-900 px-2 py-1 text-white"
+                          : "px-2 py-1"
+                      }
+                    >
+                      {option.toUpperCase()}
+                    </span>
+                  ))}
+                </span>
               </button>
               <a
                 href={phoneHref(consulateInfo.phone)}
