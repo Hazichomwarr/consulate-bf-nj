@@ -5,6 +5,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { ArrowLeft, CalendarDays } from "lucide-react";
 import Footer from "@/components/layout/Footer";
 import NavBar from "@/components/layout/Navbar";
+import ContentBadge from "@/components/shared/ContentBadge";
+import DetailBreadcrumbs from "@/components/shared/DetailBreadcrumbs";
 import {
   formatAnnouncementDate,
   type AnnouncementCategoryLabels,
@@ -101,42 +103,23 @@ export default async function AnnouncementDetailPage({
         imageSrc="/images/consul-hero.png"
         imageAlt={accessibility("heroImageAlt")}
       >
-        <nav aria-label={t("breadcrumbs.ariaLabel")}>
-          <ol className="flex flex-wrap items-center gap-2 text-sm font-semibold text-white/85">
-            <li>
-              <Link href="/" className="hover:text-amber-300">
-                {nav("home")}
-              </Link>
-            </li>
-            <li aria-hidden="true" className="text-white/50">
-              /
-            </li>
-            <li>
-              <Link href="/actualites" className="hover:text-amber-300">
-                {nav("news")}
-              </Link>
-            </li>
-            <li aria-hidden="true" className="text-white/50">
-              /
-            </li>
-            <li aria-current="page" className="text-amber-300">
-              {title}
-            </li>
-          </ol>
-        </nav>
+        <DetailBreadcrumbs
+          ariaLabel={t("breadcrumbs.ariaLabel")}
+          items={[
+            { href: "/", label: nav("home") },
+            { href: "/actualites", label: nav("news") },
+            { label: title },
+          ]}
+        />
       </PageHero>
 
       <article className="px-5 py-14 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[minmax(0,1fr)_320px]">
           <div className="max-w-3xl">
             <div className="flex flex-wrap items-center gap-3 text-sm">
-              <span className="rounded-full bg-emerald-50 px-3 py-1 font-extrabold uppercase tracking-wide text-emerald-800">
-                {categoryLabels[announcement.category]}
-              </span>
+              <ContentBadge>{categoryLabels[announcement.category]}</ContentBadge>
               {announcement.featured ? (
-                <span className="rounded-full bg-amber-100 px-3 py-1 font-extrabold uppercase tracking-wide text-amber-900">
-                  {t("cards.featured")}
-                </span>
+                <ContentBadge tone="amber">{t("cards.featured")}</ContentBadge>
               ) : null}
             </div>
 

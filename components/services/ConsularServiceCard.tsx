@@ -5,6 +5,7 @@ import type {
 import { getLocalizedText } from "@/lib/content/consular-services";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "lucide-react";
+import ContentBadge from "@/components/shared/ContentBadge";
 
 type ConsularServiceCardProps = {
   learnMoreLabel: string;
@@ -30,9 +31,9 @@ export default function ConsularServiceCard({
             {getLocalizedText(service.name, locale)}
           </h3>
           {statusLabel ? (
-            <span className="shrink-0 rounded-full bg-emerald-50 px-3 py-1 text-xs font-extrabold uppercase tracking-wide text-emerald-800">
-              {statusLabel}
-            </span>
+            <div className="shrink-0">
+              <ContentBadge>{statusLabel}</ContentBadge>
+            </div>
           ) : null}
         </div>
 

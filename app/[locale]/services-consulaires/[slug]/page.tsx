@@ -4,13 +4,13 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { AlertTriangle } from "lucide-react";
 import Footer from "@/components/layout/Footer";
 import NavBar from "@/components/layout/Navbar";
+import DetailBreadcrumbs from "@/components/shared/DetailBreadcrumbs";
 import PageHero from "@/components/shared/PageHero";
 import ServiceFaq from "@/components/services/ServiceFaq";
 import ServiceListSection from "@/components/services/ServiceListSection";
 import ServiceMetaCards from "@/components/services/ServiceMetaCards";
 import ServiceRequestCta from "@/components/services/ServiceRequestCta";
 import ServiceSteps from "@/components/services/ServiceSteps";
-import { Link } from "@/i18n/navigation";
 import { isLocale, locales, type Locale } from "@/i18n/routing";
 import {
   consularServices,
@@ -97,32 +97,14 @@ export default async function ServiceDetailPage({
         imageSrc="/images/consul-hero.png"
         imageAlt={accessibility("heroImageAlt")}
       >
-        <nav aria-label={t("breadcrumbs.ariaLabel")}>
-          <ol className="flex flex-wrap items-center gap-2 text-sm font-semibold text-white/85">
-            <li>
-              <Link href="/" className="hover:text-amber-300">
-                {nav("home")}
-              </Link>
-            </li>
-            <li aria-hidden="true" className="text-white/50">
-              /
-            </li>
-            <li>
-              <Link
-                href="/services-consulaires"
-                className="hover:text-amber-300"
-              >
-                {nav("services")}
-              </Link>
-            </li>
-            <li aria-hidden="true" className="text-white/50">
-              /
-            </li>
-            <li aria-current="page" className="text-amber-300">
-              {serviceName}
-            </li>
-          </ol>
-        </nav>
+        <DetailBreadcrumbs
+          ariaLabel={t("breadcrumbs.ariaLabel")}
+          items={[
+            { href: "/", label: nav("home") },
+            { href: "/services-consulaires", label: nav("services") },
+            { label: serviceName },
+          ]}
+        />
       </PageHero>
 
       <section className="px-5 py-14 lg:px-8">
