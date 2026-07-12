@@ -398,5 +398,56 @@
       "ctaDescription": "Retournez à la présentation générale du consulat et de son rôle institutionnel.",
       "aboutCta": "Retour à À propos"
     }
+  },
+  "DocumentsPage": {
+    "Metadata": {
+      "title": "Documents | Consulat du Burkina Faso",
+      "description": "Consultez le centre de documents pour les formulaires et guides publics du Consulat du Burkina Faso."
+    },
+    "hero": {
+      "eyebrow": "Centre de documents",
+      "title": "Documents",
+      "description": "Retrouvez les formulaires, guides et fiches d'information publiés pour préparer vos démarches."
+    },
+    "intro": {
+      "eyebrow": "Formulaires et guides",
+      "title": "Documents publics",
+      "description": "Cette rubrique est préparée pour accueillir les documents validés par le consulat. Les fichiers non confirmés restent indiqués comme à venir."
+    },
+    "categories": {
+      "title": "Catégories"
+    },
+    "categoryLabels": {
+      "passport": "Passeport",
+      "consular-card": "Carte consulaire",
+      "civil-status": "État civil",
+      "legal-guidance": "Guides juridiques",
+      "general": "Général"
+    },
+    "languageLabels": {
+      "fr": "Français",
+      "en": "Anglais",
+      "bilingual": "Bilingue"
+    },
+    "status": {
+      "available": "Disponible",
+      "coming-soon": "Bientôt",
+      "unavailable": "Indisponible"
+    },
+    "cards": {
+      "download": "Télécharger",
+      "lastUpdated": "Dernière mise à jour",
+      "notConfirmed": "À confirmer"
+    },
+    "notice": {
+      "title": "Informations importantes",
+      "confirmation": "Les documents officiels doivent être fournis ou confirmés par le consulat avant activation du téléchargement.",
+      "updates": "Les formulaires, guides et fiches peuvent être mis à jour lorsque de nouvelles informations sont validées.",
+      "downloads": "Les boutons de téléchargement sont désactivés pour les documents encore à venir."
+    },
+    "empty": {
+      "title": "Aucun document n’est disponible pour le moment.",
+      "description": "Veuillez revenir ultérieurement pour consulter les documents publiés."
+    }
   }
 }

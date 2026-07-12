@@ -398,5 +398,56 @@
       "ctaDescription": "Return to the general presentation of the consulate and its institutional role.",
       "aboutCta": "Back to About"
     }
+  },
+  "DocumentsPage": {
+    "Metadata": {
+      "title": "Documents | Consulate of Burkina Faso",
+      "description": "Review the document center for public forms and guides from the Consulate of Burkina Faso."
+    },
+    "hero": {
+      "eyebrow": "Document center",
+      "title": "Documents",
+      "description": "Find forms, guides, and information sheets published to help prepare your requests."
+    },
+    "intro": {
+      "eyebrow": "Forms and guides",
+      "title": "Public documents",
+      "description": "This section is prepared to host documents validated by the consulate. Unconfirmed files remain marked as coming soon."
+    },
+    "categories": {
+      "title": "Categories"
+    },
+    "categoryLabels": {
+      "passport": "Passport",
+      "consular-card": "Consular card",
+      "civil-status": "Civil status",
+      "legal-guidance": "Legal guides",
+      "general": "General"
+    },
+    "languageLabels": {
+      "fr": "French",
+      "en": "English",
+      "bilingual": "Bilingual"
+    },
+    "status": {
+      "available": "Available",
+      "coming-soon": "Coming soon",
+      "unavailable": "Unavailable"
+    },
+    "cards": {
+      "download": "Download",
+      "lastUpdated": "Last updated",
+      "notConfirmed": "To be confirmed"
+    },
+    "notice": {
+      "title": "Important information",
+      "confirmation": "Official documents must be provided or confirmed by the consulate before downloads are activated.",
+      "updates": "Forms, guides, and information sheets may be updated when new information is validated.",
+      "downloads": "Download buttons are disabled for documents that are still coming soon."
+    },
+    "empty": {
+      "title": "No documents are available at this time.",
+      "description": "Please check back later for published documents."
+    }
   }
 }
