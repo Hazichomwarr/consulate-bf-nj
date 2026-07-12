@@ -229,5 +229,54 @@
       "coming-soon": "Ce service sera disponible prochainement. La demande en ligne n'est pas encore ouverte.",
       "unavailable": "Ce service est actuellement indisponible. La demande en ligne n'est pas proposée pour le moment."
     }
+  },
+  "AnnouncementsPage": {
+    "Metadata": {
+      "title": "Actualités | Consulat du Burkina Faso",
+      "description": "Consultez les annonces et informations publiques publiées par le Consulat du Burkina Faso."
+    },
+    "DetailMetadata": {
+      "title": "{title} | Actualités",
+      "notFoundTitle": "Annonce introuvable | Actualités",
+      "notFoundDescription": "L'annonce demandée n'est pas disponible."
+    },
+    "hero": {
+      "eyebrow": "Informations publiques",
+      "title": "Actualités",
+      "description": "Retrouvez les annonces, notes d'information et communications publiques du consulat."
+    },
+    "intro": {
+      "eyebrow": "Rester informé",
+      "title": "Annonces et informations",
+      "description": "Cette rubrique regroupe les communications publiées sur la plateforme. Les contenus de démonstration seront remplacés par des annonces validées par le consulat."
+    },
+    "featured": {
+      "title": "Annonce mise en avant"
+    },
+    "cards": {
+      "readMore": "Lire l'annonce",
+      "featured": "À la une",
+      "publicationDate": "Date de publication"
+    },
+    "categories": {
+      "general": "Général",
+      "consular-service": "Service consulaire",
+      "community": "Communauté",
+      "emergency": "Urgence"
+    },
+    "empty": {
+      "title": "Aucune annonce n’est disponible pour le moment.",
+      "description": "Veuillez revenir ultérieurement pour consulter les annonces publiées."
+    },
+    "breadcrumbs": {
+      "ariaLabel": "Fil d'Ariane"
+    },
+    "detail": {
+      "publishedOn": "Publié le {date}",
+      "updatedOn": "Mis à jour le {date}",
+      "asideTitle": "Toutes les actualités",
+      "asideDescription": "Retournez à la liste des annonces pour consulter les autres communications disponibles.",
+      "backToAnnouncements": "Retour aux actualités"
+    }
   }
 }

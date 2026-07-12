@@ -229,5 +229,54 @@
       "coming-soon": "This service will be available soon. Online requests are not open yet.",
       "unavailable": "This service is currently unavailable. Online requests are not offered at this time."
     }
+  },
+  "AnnouncementsPage": {
+    "Metadata": {
+      "title": "News | Consulate of Burkina Faso",
+      "description": "Review public announcements and information published by the Consulate of Burkina Faso."
+    },
+    "DetailMetadata": {
+      "title": "{title} | News",
+      "notFoundTitle": "Announcement Not Found | News",
+      "notFoundDescription": "The requested announcement is not available."
+    },
+    "hero": {
+      "eyebrow": "Public information",
+      "title": "News",
+      "description": "Find announcements, information notes, and public communications from the consulate."
+    },
+    "intro": {
+      "eyebrow": "Stay informed",
+      "title": "Announcements and information",
+      "description": "This section brings together communications published on the platform. Demo content will be replaced by announcements validated by the consulate."
+    },
+    "featured": {
+      "title": "Featured announcement"
+    },
+    "cards": {
+      "readMore": "Read announcement",
+      "featured": "Featured",
+      "publicationDate": "Publication date"
+    },
+    "categories": {
+      "general": "General",
+      "consular-service": "Consular service",
+      "community": "Community",
+      "emergency": "Emergency"
+    },
+    "empty": {
+      "title": "No announcements are available at this time.",
+      "description": "Please check back later for published announcements."
+    },
+    "breadcrumbs": {
+      "ariaLabel": "Breadcrumb"
+    },
+    "detail": {
+      "publishedOn": "Published on {date}",
+      "updatedOn": "Updated on {date}",
+      "asideTitle": "All news",
+      "asideDescription": "Return to the announcements list to review other available communications.",
+      "backToAnnouncements": "Back to news"
+    }
   }
 }
