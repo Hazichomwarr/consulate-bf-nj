@@ -449,5 +449,55 @@
       "title": "No documents are available at this time.",
       "description": "Please check back later for published documents."
     }
+  },
+  "ContactPage": {
+    "Metadata": {
+      "title": "Contact | Consulate of Burkina Faso",
+      "description": "Contact the Consulate of Burkina Faso and review confirmed practical information."
+    },
+    "hero": {
+      "eyebrow": "Contact us",
+      "title": "Contact",
+      "description": "Find available information for reaching the consulate and preparing your inquiry."
+    },
+    "intro": {
+      "eyebrow": "Practical information",
+      "title": "Contact details and guidance",
+      "description": "The information displayed comes from centralized institutional constants. Unconfirmed fields are not shown as official contact details.",
+      "badge": "Information",
+      "note": "Before contacting the consulate, review the service pages to identify the procedure that matches your need."
+    },
+    "cards": {
+      "phone": "Phone",
+      "email": "Email",
+      "address": "Address",
+      "officeHours": "Office hours",
+      "emergencyPhone": "Emergency assistance",
+      "officialWebsite": "Official website",
+      "officialWebsiteValue": "Institutional website"
+    },
+    "actions": {
+      "call": "Call",
+      "email": "Send email",
+      "openWebsite": "Open website"
+    },
+    "location": {
+      "title": "Office location",
+      "description": "Use the confirmed contact details to prepare your visit.",
+      "placeholder": "The public office address will be displayed after confirmation by the consulate.",
+      "openMaps": "Open in Google Maps",
+      "mapsPlaceholder": "The office map will be added once a verified address and Google Maps link are confirmed."
+    },
+    "emergency": {
+      "title": "Emergency notice",
+      "officialChannels": "Emergency consular assistance should be requested through official channels confirmed by the consulate.",
+      "localServices": "For immediate police, fire, or medical emergencies, contact local emergency services first."
+    },
+    "servicesReminder": {
+      "eyebrow": "Prepare your request",
+      "title": "Review consular services",
+      "description": "The service pages explain available information and items that still need confirmation before a procedure.",
+      "cta": "View services"
+    }
   }
 }

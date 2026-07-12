@@ -449,5 +449,55 @@
       "title": "Aucun document n’est disponible pour le moment.",
       "description": "Veuillez revenir ultérieurement pour consulter les documents publiés."
     }
+  },
+  "ContactPage": {
+    "Metadata": {
+      "title": "Contact | Consulat du Burkina Faso",
+      "description": "Contactez le Consulat du Burkina Faso et consultez les informations pratiques confirmées."
+    },
+    "hero": {
+      "eyebrow": "Nous contacter",
+      "title": "Contact",
+      "description": "Retrouvez les informations disponibles pour joindre le consulat et préparer votre échange."
+    },
+    "intro": {
+      "eyebrow": "Informations pratiques",
+      "title": "Coordonnées et orientation",
+      "description": "Les informations affichées proviennent des constantes institutionnelles centralisées. Les champs non confirmés ne sont pas affichés comme coordonnées officielles.",
+      "badge": "Information",
+      "note": "Avant de contacter le consulat, consultez les pages de services pour identifier la démarche correspondant à votre besoin."
+    },
+    "cards": {
+      "phone": "Téléphone",
+      "email": "Courriel",
+      "address": "Adresse",
+      "officeHours": "Horaires d'ouverture",
+      "emergencyPhone": "Assistance d'urgence",
+      "officialWebsite": "Site officiel",
+      "officialWebsiteValue": "Site institutionnel"
+    },
+    "actions": {
+      "call": "Appeler",
+      "email": "Envoyer un courriel",
+      "openWebsite": "Ouvrir le site"
+    },
+    "location": {
+      "title": "Emplacement du bureau",
+      "description": "Utilisez les coordonnées confirmées pour préparer votre visite.",
+      "placeholder": "L'adresse publique du bureau sera affichée après confirmation par le consulat.",
+      "openMaps": "Ouvrir dans Google Maps",
+      "mapsPlaceholder": "La carte du bureau sera ajoutée lorsqu'une adresse et un lien Google Maps vérifiés seront confirmés."
+    },
+    "emergency": {
+      "title": "Avis d'urgence",
+      "officialChannels": "L'assistance consulaire d'urgence doit être sollicitée par les canaux officiels confirmés par le consulat.",
+      "localServices": "En cas d'urgence immédiate concernant la police, les pompiers ou une assistance médicale, contactez d'abord les services d'urgence locaux."
+    },
+    "servicesReminder": {
+      "eyebrow": "Préparer votre demande",
+      "title": "Consultez les services consulaires",
+      "description": "Les pages de services indiquent les informations disponibles et les éléments qui doivent encore être confirmés avant une démarche.",
+      "cta": "Voir les services"
+    }
   }
 }
